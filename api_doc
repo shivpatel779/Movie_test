@@ -1,0 +1,304 @@
+API Documentation
+
+1. Movie create API
+
+  URL: /api/v1/movies
+  TYPE: POST
+  REQUEST:
+  {
+    "movie": {
+      "title": "abc",
+      "summary": "test",
+      "year": "2020",
+      "genre": "",
+      "imdb_link": "https://www.imdb.com/title/tt8291224/"
+    }
+  }
+
+  RESPONSE:
+  {
+      "id": 5,
+      "title": "abc",
+      "summary": "test",
+      "year": "2020",
+      "genre": "",
+      "imdb_link": "https://www.imdb.com/title/tt8291224/",
+      "created_at": "2020-04-21T07:39:59.689Z",
+      "updated_at": "2020-04-21T07:39:59.689Z"
+  }
+
+
+2. Movie Update API
+
+  URL: /api/v1/movies/5
+  TYPE: PUT
+  REQUEST:
+  {
+    "movie": {
+      "title": "abc1",
+      "summary": "test",
+      "year": "2020",
+      "genre": "",
+      "imdb_link": "https://www.imdb.com/title/tt8291224/"
+    }
+  }
+
+  RESPONSE:
+  {
+      "message": "Movie updated successfully."
+  }
+
+
+3. Movie Show API
+
+  URL: /api/v1/movies/5
+  TYPE: GET
+  REQUEST: No request body needed.
+
+
+  RESPONSE:
+  {
+      "id": 5,
+      "title": "abc1",
+      "summary": "test",
+      "year": "2020",
+      "genre": "",
+      "imdb_link": "https://www.imdb.com/title/tt8291224/",
+      "created_at": "2020-04-21T07:39:59.689Z",
+      "updated_at": "2020-04-21T07:43:02.577Z"
+  }
+
+4. Movie List API
+
+  URL: /api/v1/movies
+  TYPE: GET
+  REQUEST: No request body needed.
+
+
+  RESPONSE:
+  [
+      {
+          "id": 1,
+          "title": "xyz",
+          "summary": "test",
+          "year": "2020",
+          "genre": "",
+          "imdb_link": "https://www.imdb.com/title/tt8291224/",
+          "created_at": "2020-04-20T13:33:54.079Z",
+          "updated_at": "2020-04-20T13:33:54.079Z"
+      },
+      {
+          "id": 3,
+          "title": "Star Wars",
+          "summary": "This movie is for testing",
+          "year": "2018",
+          "genre": "Comedy",
+          "imdb_link": "https://www.imdb.com/title/tt8291224/",
+          "created_at": "2020-04-21T07:24:32.685Z",
+          "updated_at": "2020-04-21T07:24:32.685Z"
+      },
+      {
+          "id": 4,
+          "title": "Lord of the Rings",
+          "summary": "This movie is for testing",
+          "year": "2018",
+          "genre": "Comedy",
+          "imdb_link": "https://www.imdb.com/title/tt8291224/",
+          "created_at": "2020-04-21T07:24:32.797Z",
+          "updated_at": "2020-04-21T07:24:32.797Z"
+      },
+      {
+          "id": 5,
+          "title": "abc1",
+          "summary": "test",
+          "year": "2020",
+          "genre": "",
+          "imdb_link": "https://www.imdb.com/title/tt8291224/",
+          "created_at": "2020-04-21T07:39:59.689Z",
+          "updated_at": "2020-04-21T07:43:02.577Z"
+      }
+  ]
+
+
+5. Movie Delete API
+
+  URL: /api/v1/movies/5
+  TYPE: DELETE
+  REQUEST: No request body needed.
+
+
+  RESPONSE:
+  {
+      "message": "Movie deleted successfully."
+  }
+
+6. Best Seat Available API
+
+  URL: /api/v1/best_seat_available
+  TYPE: POST
+  REQUEST:
+  {
+      "venue": {
+          "layout": {
+              "rows": 10,
+              "columns": 12
+          }
+      },
+      "seat_requested": 1,
+      "seats": {
+          "a1": {
+              "id": "a1",
+              "row": "a",
+              "column": 1,
+              "status": "AVAILABLE"
+          },
+          "a2": {
+              "id": "a2",
+              "row": "a",
+              "column": 2,
+              "status": "AVAILABLE"
+          },
+          "a3": {
+              "id": "a3",
+              "row": "a",
+              "column": 3,
+              "status": "AVAILABLE"
+          },
+          "a4": {
+              "id": "a4",
+              "row": "a",
+              "column": 4,
+              "status": "AVAILABLE"
+          },
+          "a5": {
+              "id": "a5",
+              "row": "a",
+              "column": 5,
+              "status": "AVAILABLE"
+          },
+          "a6": {
+              "id": "a6",
+              "row": "a",
+              "column": 6,
+              "status": "AVAILABLE"
+          },
+          "a7": {
+              "id": "a7",
+              "row": "a",
+              "column": 7,
+              "status": "AVAILABLE"
+          },
+          "a8": {
+              "id": "a8",
+              "row": "a",
+              "column": 8,
+              "status": "AVAILABLE"
+          },
+          "a9": {
+              "id": "a9",
+              "row": "a",
+              "column": 9,
+              "status": "AVAILABLE"
+          },
+          "a10": {
+              "id": "a10",
+              "row": "a",
+              "column": 10,
+              "status": "AVAILABLE"
+          },
+          "a11": {
+              "id": "a11",
+              "row": "a",
+              "column": 11,
+              "status": "AVAILABLE"
+          },
+          "a12": {
+              "id": "a12",
+              "row": "a",
+              "column": 12,
+              "status": "AVAILABLE"
+          },
+          "b1": {
+              "id": "b1",
+              "row": "b",
+              "column": 1,
+              "status": "AVAILABLE"
+          },
+          "b2": {
+              "id": "b2",
+              "row": "b",
+              "column": 2,
+              "status": "AVAILABLE"
+          },
+          "b3": {
+              "id": "b3",
+              "row": "b",
+              "column": 3,
+              "status": "AVAILABLE"
+          },
+          "b4": {
+              "id": "b4",
+              "row": "b",
+              "column": 4,
+              "status": "AVAILABLE"
+          },
+          "b5": {
+              "id": "b5",
+              "row": "b",
+              "column": 5,
+              "status": "AVAILABLE"
+          },
+          "b6": {
+              "id": "b6",
+              "row": "b",
+              "column": 6,
+              "status": "AVAILABLE"
+          },
+          "b7": {
+              "id": "b7",
+              "row": "b",
+              "column": 7,
+              "status": "AVAILABLE"
+          },
+          "b8": {
+              "id": "b8",
+              "row": "b",
+              "column": 8,
+              "status": "AVAILABLE"
+          },
+          "b9": {
+              "id": "b9",
+              "row": "b",
+              "column": 9,
+              "status": "AVAILABLE"
+          },
+          "b10": {
+              "id": "b10",
+              "row": "b",
+              "column": 10,
+              "status": "AVAILABLE"
+          },
+          "b11": {
+              "id": "b11",
+              "row": "b",
+              "column": 11,
+              "status": "AVAILABLE"
+          },
+          "b12": {
+              "id": "b12",
+              "row": "b",
+              "column": 12,
+              "status": "AVAILABLE"
+          }
+      }
+  }
+
+
+  RESPONSE:
+  {
+      "seat_available": [
+          "a6"
+      ],
+      "status": "successful"
+  }
+

@@ -1,0 +1,19 @@
+development:
+  database: movie_dev
+  adapter: postgresql
+  encoding: utf-8
+  username: postgres
+  password: 12345678
+  host: localhost
+  pool: 5
+  timeout: 5000
+
+test:
+  database: movie_test
+  adapter: postgresql
+  encoding: utf-8
+  username: postgres
+  password: 12345678
+  host: localhost
+  pool: 5
+  timeout: 5000
